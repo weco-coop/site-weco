@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WECO – L'immobilier social et solidaire impulsé par Quatorze</title>
+<meta name="description" content="Weco, dispositif d'immobilier solidaire : réhabilitation du patrimoine vacant pour loger chacun dignement. Modèle économique innovant de mixité sociale.">
+<meta property="og:title" content="WECO – L'immobilier social et solidaire">
+<meta property="og:description" content="Weco propose un nouveau modèle économique de mixité sociale, un dispositif d'immobilier solidaire ayant pour objectif de loger chacun dignement.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://weco.coop/">
+<meta property="og:image" content="https://weco.coop/assets/img/Plan-de-travail-8A-1.png">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WECO - L'immobilier social et solidaire">
+<meta name="twitter:description" content="Weco propose un nouveau modèle économique de mixité sociale, un dispositif d'immobilier solidaire ayant pour objectif de loger chacun dignement.">
+<meta name="twitter:image" content="https://weco.coop/assets/img/Plan-de-travail-8A-1.png">
+<meta property="og:site_name" content="WECO">
+<link rel="icon" type="image/svg+xml" href="assets/img/Plan-de-travail-1A.svg">
+<link rel="canonical" href="https://weco.coop/">
+<style>
+/* ===== FONTS ===== */
+@font-face {
+  font-family: 'Grenette Pro';
+  src: url('assets/fonts/GrenettePro-Regular.woff2') format('woff2'),
+       url('assets/fonts/GrenettePro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Girott';
+  src: url('assets/fonts/Girott-Regular.woff2') format('woff2'),
+       url('assets/fonts/Girott-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'BureauGrotesque';
+  src: url('assets/fonts/BureauGrotesque-FiveThree.woff2') format('woff2'),
+       url('assets/fonts/BureauGrotesque-FiveThree.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid var(--bg-purple);
+  outline-offset: 2px;
+}
+body {
+  font-family: 'BureauGrotesque', 'Arial Narrow', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #303133;
+  background: #f4f2ea;
+  line-height: 1.6;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* ===== COLORS ===== */
+:root {
+  --bg-cream: #f4f2ea;
+  --bg-yellow: #ffff78;
+  --bg-purple: #8b68c6;
+  --accent-coral: #e8755e;
+  --text-dark: #303133;
+  --text-purple: #8b68c6;
+  --text-white: #ffffff;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+section {
+  padding: 70px 0;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, .heading {
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+}
+h1 { font-size: 35px; }
+h2 { font-size: 29px; }
+h3 { font-size: 24px; color: var(--accent-coral); text-transform: none; }
+.font-girott {
+  font-family: 'Girott', 'Impact', sans-serif;
+}
+.dispositif-intro .highlight,
+.innovation .lead .highlight {
+  background: var(--bg-yellow);
+  padding: 2px 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.body-text {
+  font-family: 'Grenette Pro', Georgia, serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ===== HEADER / NAV ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--bg-cream);
+  transition: box-shadow 0.3s ease;
+}
+header.scrolled .nav-inner {
+  height: 60px;
+}
+header.scrolled .nav-logo img {
+  height: 40px;
+}
+@media (min-width: 960px) {
+  header.scrolled .nav-inner { height: 70px; }
+  header.scrolled .nav-logo img { height: 50px; }
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 80px;
+  position: relative;
+  transition: height 0.3s ease;
+}
+.nav-logo {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.nav-logo img {
+  height: 64px;
+  width: auto;
+  transition: height 0.3s ease;
+}
+@media (min-width: 960px) {
+  .nav-logo img { height: 130px; }
+  .nav-inner { height: 140px; }
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+nav a {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  padding: 12px 8px;
+  display: inline-block;
+}
+nav a:hover { color: var(--accent-coral); }
+nav a.active { color: var(--accent-coral); }
+
+/* Mobile menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+}
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text-dark);
+  transition: 0.3s;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-cream);
+  text-align: center;
+  padding-top: 180px;
+  padding-bottom: 20px;
+}
+.hero-logo {
+  max-width: 1100px;
+  width: 90%;
+  margin-bottom: 30px;
+}
+.hero .chevron {
+  font-size: 2.2rem;
+  color: var(--accent-coral);
+  animation: bounce 2s infinite;
+  transition: color 0.2s;
+  line-height: 1;
+  font-weight: 100;
+  display: inline-block;
+}
+.hero .chevron:hover { color: var(--text-purple); }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* ===== SECTION: DISPOSITIF INTRO ===== */
+.dispositif-intro {
+  background: var(--bg-cream);
+}
+.dispositif-intro .grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 32px;
+  align-items: start;
+}
+.dispositif-intro h2 { margin-bottom: 12px; font-size: 35px; color: var(--text-purple); }
+.dispositif-intro .illus { max-height: 200px; max-width: 180px; height: auto; width: auto; display: block; margin: 0 auto; }
+.dispositif-intro .desc {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  line-height: 1.5;
+}
+.dispositif-intro .desc .arrow-item {
+  display: block;
+  margin-top: 12px;
+}
+
+/* ===== SECTION: DISPOSITIF DETAILS (yellow) ===== */
+.dispositif-details {
+  background: var(--bg-yellow);
+  padding: 80px 0;
+}
+.dispositif-details .grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 32px;
+  align-items: center;
+}
+.dispositif-details h2 {
+  color: var(--text-purple);
+  margin-bottom: 16px;
+  font-size: 35px;
+}
+.dispositif-details .missions h4 {
+  font-size: 24px;
+  color: var(--text-dark);
+  margin-top: 16px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+.dispositif-details .missions p {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+.dispositif-details .missions h3 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+/* ===== SECTION: CONTEXTE ===== */
+.contexte {
+  background: var(--bg-cream);
+  padding: 80px 0 40px;
+}
+.contexte h2 {
+  color: var(--accent-coral);
+  margin-bottom: 24px;
+}
+
+/* ===== SECTION: INNOVATION ===== */
+.innovation {
+  background: var(--bg-cream);
+  padding: 80px 0;
+}
+.innovation .grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 36px;
+  align-items: start;
+}
+.innovation h2 {
+  color: var(--text-purple);
+  margin-bottom: 24px;
+}
+.innovation .lead {
+  font-size: 18px;
+  line-height: 1.45;
+}
+.innovation .col-detail h4 {
+  margin-bottom: 8px;
+}
+.innovation .col-detail p {
+  font-size: 0.92rem;
+  margin-bottom: 16px;
+}
+.innovation .col-apports {
+  color: var(--text-purple);
+}
+.innovation .col-apports h4 {
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+.innovation .col-apports p {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+/* ===== IMAGE FULL WIDTH ===== */
+.full-image {
+  background: var(--bg-cream);
+  padding: 40px 0;
+}
+
+/* ===== SECTION: BUDGET + PRIX ===== */
+.budget-prix {
+  background: var(--bg-cream);
+}
+.budget-prix .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.budget-prix h2 {
+  color: var(--accent-coral);
+  margin-bottom: 24px;
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+.budget-prix .chart-img { max-width: 450px; width: 80%; margin: 0 auto; display: block; }
+.budget-prix .prix-block {
+  background: var(--bg-yellow);
+  padding: 36px;
+}
+.budget-prix .prix-block h3 {
+  text-transform: none;
+  margin-bottom: 16px;
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+.budget-prix .prix-block p {
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+}
+.budget-prix .prix-block img {
+  width: 100%;
+  filter: grayscale(1) contrast(1.5);
+  mix-blend-mode: multiply;
+}
+
+/* ===== SECTION: DEVELOPPEMENT ===== */
+.developpement {
+  background: var(--bg-cream);
+  padding: 80px 0;
+}
+.developpement h2 { margin-bottom: 36px; color: var(--text-purple); }
+.developpement .grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+.developpement .col h4 {
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+.developpement .col h4:first-child { margin-top: 0; }
+.developpement .col p {
+  font-family: 'Grenette Pro', Georgia, serif;
+  font-size: 0.92rem;
+  margin-bottom: 12px;
+}
+.developpement .col p.intro-text {
+  font-family: 'BureauGrotesque', 'Arial Narrow', sans-serif;
+  font-weight: 500;
+}
+
+/* ===== SECTION: QUATORZE + WECO INVEST (cream) ===== */
+.quatorze-weco {
+  background: var(--bg-cream);
+  padding: 80px 0;
+}
+.quatorze-weco .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+.quatorze-weco .org-logo {
+  max-width: 120px;
+  max-height: 55px;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+.quatorze-weco p {
+  font-family: 'Grenette Pro', Georgia, serif;
+  font-size: 0.95rem;
+}
+
+/* ===== SECTION: EQUIPE ===== */
+.equipe {
+  background: var(--bg-purple);
+  color: var(--text-white);
+  padding: 90px 0;
+}
+.equipe h2 { margin-bottom: 48px; }
+.equipe .team-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+}
+.team-member { text-align: center; }
+.team-member .photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 16px;
+}
+.team-member .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.team-member h4 {
+  font-size: 24px;
+  text-transform: none;
+  margin-bottom: 8px;
+  color: var(--text-white);
+}
+.team-member p {
+  font-family: 'Grenette Pro', Georgia, serif;
+  font-size: 13px;
+  line-height: 1.5;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* ===== SECTION: PARTENAIRES ===== */
+.partenaires {
+  background: var(--bg-cream);
+}
+.partenaires .grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.partenaires h2 { margin-bottom: 24px; }
+.partenaires .contact-block h2 {
+  font-family: 'Girott', 'Impact', sans-serif;
+  color: var(--text-purple);
+}
+.partenaires .contact-block p {
+  font-size: 1rem;
+  color: var(--text-purple);
+  line-height: 1.6;
+}
+
+/* ===== SCROLL TO TOP ===== */
+.scroll-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  background: var(--bg-cream);
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.scroll-top.visible { opacity: 1; }
+
+
+footer { background: var(--bg-cream); padding: 24px 0; font-size: 0.85rem; color: #999; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1499px) {
+  .innovation .lead { font-size: 16px; }
+}
+@media (max-width: 960px) {
+  .dispositif-intro .grid,
+  .dispositif-details .grid,
+  .innovation .grid,
+  .budget-prix .grid,
+  .quatorze-weco .grid,
+  .partenaires .grid {
+    grid-template-columns: 1fr;
+  }
+  .developpement .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .equipe .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  nav ul { display: none; }
+  .menu-toggle { display: flex; }
+  nav.open ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: var(--bg-cream);
+    padding: 20px 24px;
+    gap: 16px;
+  }
+  .innovation .lead { font-size: 13px; }
+}
+@media (max-width: 600px) {
+  .equipe .team-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="assets/img/Plan-de-travail-1A.svg" alt="WECO">
+    </a>
+    <button type="button" class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mainNav">
+      <ul>
+        <li><a href="#le-dispositif">Le dispositif</a></li>
+        <li><a href="#le-contexte">Le contexte</a></li>
+        <li><a href="#innovation">L'innovation</a></li>
+        <li><a href="#developpement">Développement</a></li>
+        <li><a href="#equipe">Équipe</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <h1 class="sr-only">WECO - L'immobilier social et solidaire</h1>
+  <img class="hero-logo" src="assets/img/Plan-de-travail-8A-1.png" alt="WECO - L'immobilier social et solidaire">
+  <a href="#le-dispositif" class="chevron" aria-label="Descendre">&#8964;</a>
+</section>
+
+<!-- LE DISPOSITIF - Intro -->
+<section class="dispositif-intro" id="le-dispositif">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <h2>Le dispositif</h2>
+        <img loading="lazy" class="illus" src="assets/img/Plan-de-travail-10A.png" alt="Illustration dispositif">
+      </div>
+      <div class="desc">
+        <p>Weco propose <span class="highlight">un nouveau modèle économique</span> de mixité sociale, un dispositif d'immobilier solidaire, ayant pour objectif de loger chacun dignement :</p>
+        <p class="arrow-item"><span class="highlight">→ La réhabilitation du patrimoine vacant appartenant à la personne publique ou privée est financée par la construction de logements neufs.</span></p>
+        <p class="arrow-item"><span class="highlight">→ Les bâtiments réhabilités sont à destination des populations les plus fragiles.</span></p>
+        <p class="arrow-item"><span class="highlight">→ Les logements neufs sont proposés en accession sociale à la propriété.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LE DISPOSITIF - Détails (jaune) -->
+<section class="dispositif-details">
+  <div class="container">
+    <div class="grid">
+      <div class="missions">
+        <h2>Le dispositif</h2>
+        <h4>Trois missions principales</h4>
+        <p>→ L'accès à un logement décent pour chacun</p>
+        <p>→ La mixité sociale et l'insertion des personnes mal-logées.</p>
+        <p>→ La lutte contre la précarité énergétique et la transition écologique, à travers la réhabilitation de l'immobilier dégradé.</p>
+        <h3>Un gain pour les propriétaires !</h3>
+        <p>Une réhabilitation sans dépense financière</p>
+        <h3>Un gain pour le territoire !</h3>
+        <p>Foncier vacant revalorisé dans la logique des Communs</p>
+      </div>
+      <div>
+        <img loading="lazy" src="assets/img/Plan-de-travail-15A.png" alt="Schéma du dispositif WECO">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LE CONTEXTE -->
+<section class="contexte" id="le-contexte">
+  <div class="container">
+    <h2>Le contexte</h2>
+    <img loading="lazy" src="assets/img/Plan-de-travail-16A.png" alt="Contexte - chiffres clés">
+  </div>
+</section>
+
+<!-- INNOVATION -->
+<section class="innovation" id="innovation">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <h2>Innovation juridique<br>et économique</h2>
+        <p class="lead"><span class="highlight">Une structure juridique adaptée aux enjeux : chaque territoire d'opérations donne lieu à la création d'une société de projet.</span></p>
+      </div>
+      <div class="col-detail">
+        <p>La structure juridique prend la forme d'une Société Coopérative d'Intérêt Collectif (SCIC), par actions simplifiée, à capital variable. La personne publique étant sociétaire minoritaire, la SCIC monte ses opérations dans le cadre de marchés privés, ce qui en facilite d'autant la gestion.</p>
+        <h4>Un modèle économique pérenne</h4>
+        <p>Dans une logique de promotion immobilière solidaire, chaque réhabilitation donne lieu à la construction de logement neuf sur la même parcelle. Le foncier est ainsi revalorisé par une densification douce et par la rénovation des biens immobiliers dégradés. La vente des logements neufs finance la réhabilitation, ainsi qu'une partie de l'accompagnement social des personnes relogées dans le bâti rénové.</p>
+      </div>
+      <div class="col-apports">
+        <h4>Apports au capital de la SCIC</h4>
+        <p>→ L'association Quatorze apporte en industrie le modèle opérationnel de co-construction nécessaire à la rentabilité.</p>
+        <p>→ Weco Invest apporte en numéraire le financement des opérations</p>
+        <p>→ Les personnes publiques ou privées propriétaires apportent en nature des parcelles et biens immobiliers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEMA FULL WIDTH -->
+<section class="full-image">
+  <div class="container">
+    <img loading="lazy" src="assets/img/Plan-de-travail-7A.png" alt="Schéma de fonctionnement">
+  </div>
+</section>
+
+<!-- BUDGET + PRIX ESSEC -->
+<section class="budget-prix">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <h2>Budget d'un projet Weco Invest</h2>
+        <img loading="lazy" class="chart-img" src="assets/img/Plan-de-travail-6A.png" alt="Budget type">
+      </div>
+      <div class="prix-block">
+        <h3>« Grand Prix ESSEC de la Ville solidaire et de l'Immobilier responsable »</h3>
+        <p>Cette année, le dispositif Weco a été lauréat du Prix Grand Paris Innovation Urbaine Solidaire, dans le cadre de la remise des « Grands Prix ESSEC de la Ville solidaire et de l'Immobilier responsable », organisée par la Chaire Immobilier et Développement durable de l'ESSEC.</p>
+        <p>Ce Prix vise à faire émerger des initiatives pouvant apporter des solutions innovantes face à la crise sociale et économique du logement.</p>
+        <img loading="lazy" src="assets/img/Plan-de-travail-4A.jpg" alt="Logos partenaires prix">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEVELOPPEMENT -->
+<section class="developpement" id="developpement">
+  <div class="container">
+    <h2>Historique et plan de développement</h2>
+    <div class="grid-3">
+      <div class="col">
+        <p class="intro-text">La résorption pacifique d'un bidonville à Montreuil en 2018 fait émerger un modèle alternatif, en collaboration étroite avec la fondation Abbé Pierre. Weco se positionne face aux difficultés d'accès à un logement pour les exclus des dispositifs classiques.</p>
+        <p>Le fonds d'investissement coopératif Weco Invest est alors créé pour mettre la finance solidaire au service des projets luttant contre le mal-logement.</p>
+      </div>
+      <div class="col">
+        <h4>Élargissement des publics</h4>
+        <p>Conçu pour reloger des personnes vivant en bidonville, ce dispositif s'adresse aujourd'hui à un public élargi, en fonction des enjeux d'accès au logement identifiés localement.</p>
+        <h4>Déploiement national</h4>
+        <p>Actuellement en cours d'expérimentation à Montreuil, Weco a pour vocation à essaimer sur de nouveaux territoires, afin d'accélérer la résorption de l'habitat indigne dans toute la France. Des coopératives dédiées seront créées sur chaque territoire de projet.</p>
+      </div>
+      <div class="col">
+        <h4>D'ici 5 ans</h4>
+        <p>Nous avons pour ambition de créer un réseau de dix territoires investis sur la production de deux cent logements très sociaux.</p>
+        <h4>À 10 ans</h4>
+        <p>Nous préparons une accélération de la production de logements, en ouvrant le dispositif aux propriétaires privés, afin d'atteindre l'objectif de mille logements très sociaux.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUATORZE + WECO INVEST (jaune) -->
+<section class="quatorze-weco">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <img loading="lazy" class="org-logo" src="assets/img/Plan-de-travail-1A.png" alt="Quatorze">
+        <p>Quatorze est une association qui vise à promouvoir, expérimenter et transmettre une approche de l'architecture sociale et solidaire. Elle mène des projets d'architecture et d'urbanisme en co-conception et co-construction, autour de trois principaux champs d'action : accueil inconditionnel, formation-action, espaces communs.</p>
+      </div>
+      <div>
+        <img loading="lazy" class="org-logo" src="assets/img/Plan-de-travail-1-copieA.png" alt="Weco Invest">
+        <p>Weco Invest est un fonds d'investissement coopératif développé en 2018 dans le but de fédérer une communauté d'investisseurs (privés et institutionnels) engagés sur la résorption de l'habitat indigne en France et en Europe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section class="equipe" id="equipe">
+  <div class="container">
+    <h2>Équipe</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <div class="photo">
+          <img loading="lazy" src="assets/img/Mathieu-C2-scaled.jpg" alt="Mathieu Castaings">
+        </div>
+        <h4>Mathieu Castaings</h4>
+        <p>Expert-Comptable, juridique et financier. PDG FINACOOP et FINACOOP Nouvelle-Aquitaine. DG Weco Invest</p>
+      </div>
+      <div class="team-member">
+        <div class="photo">
+          <img loading="lazy" src="assets/img/Aymeric-Poisson.jpg" alt="Aymeric Poisson">
+        </div>
+        <h4>Aymeric Poisson</h4>
+        <p>Avocat à la Cour. Co-fondateur de Weco Invest, spécialisé en droit public des affaires (contrats, marchés, construction et domanialité) et chargé d'enseignement à l'ESSEC Business School.</p>
+      </div>
+      <div class="team-member">
+        <div class="photo">
+          <img loading="lazy" src="assets/img/Franck.jpg" alt="Franck Mackowiak">
+        </div>
+        <h4>Franck Mackowiak</h4>
+        <p>Directeur Immobilier chez Association Aurore. Co-fondateur et administrateur de Weco Invest</p>
+      </div>
+      <div class="team-member">
+        <div class="photo">
+          <img loading="lazy" src="assets/img/Romain.jpg" alt="Romain Minod">
+        </div>
+        <h4>Romain Minod</h4>
+        <p>Architecte. Co-fondateur et président de Weco Invest. Co-fondateur et co-directeur de l'association Quatorze</p>
+      </div>
+      <div class="team-member">
+        <div class="photo">
+          <img loading="lazy" src="assets/img/margaux.jpg" alt="Margaux Charbonnier">
+        </div>
+        <h4>Margaux Charbonnier</h4>
+        <p>Chargée de développement Weco et programme « Territoire Zéro Bidonville ». Diplômée de l'ESSEC (spécialité économie urbaine) et de l'ENS (département de géographie)</p>
+      </div>
+      <div class="team-member">
+        <div class="photo">
+          <img loading="lazy" src="assets/img/Antoine-Demarest.jpg" alt="Antoine Demarest">
+        </div>
+        <h4>Antoine Demarest</h4>
+        <p>Architecte et chargé de développement Weco région Sud-Est. Co-fondateur de l'association Quatorze, ancien directeur d'entreprise générale de construction et enseignant en Construction à l'ENS-Architecture de Marseille.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTENAIRES + CONTACT -->
+<section class="partenaires" id="partenaires">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <h2>Les partenaires</h2>
+        <img loading="lazy" src="assets/img/Plan-de-travail-17A.png" alt="Logos partenaires">
+      </div>
+      <div class="contact-block" id="contact">
+        <h2 class="font-girott">WECO</h2>
+        <p>
+          La Halle aux Cuirs,<br>
+          Parc de la Villette,<br>
+          2, rue de la Clôture,<br>
+          75 019 Paris<br><br>
+          <a href="https://weco.coop">www.weco.coop</a><br>
+          <a href="mailto:contact@weco.coop">contact@weco.coop</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    &copy; 2026 WECO. | Tous droits réservés.
+  </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<a href="#" class="scroll-top" id="scrollTop" aria-label="Retour en haut">↑</a>
+
+<script>
+/* ===== INIT ===== */
+const scrollBtn = document.getElementById('scrollTop');
+const headerEl = document.querySelector('header');
+const heroEl = document.querySelector('.hero');
+const menuToggle = document.getElementById('menuToggle');
+const mainNav = document.getElementById('mainNav');
+const navSections = document.querySelectorAll('section[id], [id="contact"]');
+const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+/* ===== SCROLL (fusionné, optimisé) ===== */
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    requestAnimationFrame(() => {
+      onScroll();
+      ticking = false;
+    });
+    ticking = true;
+  }
+}, { passive: true });
+
+function onScroll() {
+  if (scrollBtn) scrollBtn.classList.toggle('visible', window.scrollY > 400);
+  if (headerEl) headerEl.classList.toggle('scrolled', window.scrollY > 100);
+
+  /* Navigation active */
+  const scrollY = window.scrollY + window.innerHeight * 0.35;
+  const heroBottom = heroEl ? heroEl.offsetTop + heroEl.offsetHeight : 0;
+  navLinks.forEach(l => l.classList.remove('active'));
+  if (window.scrollY < heroBottom - 200) return;
+  let closest = null;
+  let closestDist = Infinity;
+  navSections.forEach(section => {
+    const mid = section.offsetTop + section.offsetHeight / 2;
+    const dist = Math.abs(scrollY - mid);
+    if (dist < closestDist) { closestDist = dist; closest = section; }
+  });
+  if (closest) {
+    const link = document.querySelector('nav a[href="#' + closest.id + '"]');
+    if (link) link.classList.add('active');
+  }
+}
+
+/* ===== MENU MOBILE ===== */
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    menuToggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+  });
+}
+
+/* Fermer le menu au clic sur un lien */
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (mainNav) mainNav.classList.remove('open');
+    if (menuToggle) {
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Ouvrir le menu');
+    }
+  });
+});
+
+/* Fermer le menu avec Escape */
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && mainNav && mainNav.classList.contains('open')) {
+    mainNav.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Ouvrir le menu');
+    menuToggle.focus();
+  }
+});
+</script>
+
+</body>
+</html>
