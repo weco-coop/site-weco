@@ -175,11 +175,11 @@ Un breakpoint supplémentaire à 1499px réduit la taille du `.lead` de l'innova
 
 ## Spécifications du projet
 
-Le fichier `spec.md` contient la mémoire du projet : état actuel, brief, décisions techniques, historique des phases, points à valider avec Romain.
+Le fichier `docs/spec.md` contient la mémoire du projet : état actuel, brief, décisions techniques, historique des phases, points à valider avec Romain.
 
-**Règle obligatoire** : à chaque session de modification du site, mettre à jour `spec.md` avant de clôturer la session. Inclure :
+**Règle obligatoire** : à chaque session de modification du site, mettre à jour `docs/spec.md` avant de clôturer la session. Inclure :
 - État actuel et nombre de lignes de `index.html`
 - Résumé des changements effectués dans la session
 - Mise à jour des notes et décisions si pertinent
 
-Committer `spec.md` avec les autres changements.
+Committer `docs/spec.md` avec les autres changements.
