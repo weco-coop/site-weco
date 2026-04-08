@@ -91,6 +91,7 @@ docs/
   charte-visuelle.md    Les couleurs, polices et règles graphiques du site
 CLAUDE.md               Les règles que Claude Code suit automatiquement
 GUIDE.md                Ce fichier
+spec.md                 Les spécifications et historique du projet (état, décisions, phases)
 .github/workflows/      Le script de déploiement automatique
 ```
 
@@ -108,6 +109,12 @@ GUIDE.md                Ce fichier
 | Police décorative | Girott |
 
 La charte complète est dans `docs/charte-visuelle.md`.
+
+## Spécifications du projet (spec.md)
+
+Le fichier `spec.md` contient la mémoire du projet : état actuel, décisions techniques, historique des phases et points à valider.
+
+Quand on modifie le site (via Claude Code ou manuellement), `spec.md` doit être mis à jour avant de clôturer la session. Claude Code le fait automatiquement si on utilise le projet via Claude Code Desktop.
 
 ## En cas de problème
 

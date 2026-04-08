@@ -172,3 +172,14 @@ Un breakpoint supplémentaire à 1499px réduit la taille du `.lead` de l'innova
 - **Production** : déploiement manuel via GitHub Actions (onglet Actions > "Déployer sur weco.coop" > Run workflow)
 - Ne jamais modifier directement sur le serveur
 - Workflow : modifier → push → vérifier preview → déployer quand satisfait
+
+## Spécifications du projet
+
+Le fichier `spec.md` contient la mémoire du projet : état actuel, brief, décisions techniques, historique des phases, points à valider avec Romain.
+
+**Règle obligatoire** : à chaque session de modification du site, mettre à jour `spec.md` avant de clôturer la session. Inclure :
+- État actuel et nombre de lignes de `index.html`
+- Résumé des changements effectués dans la session
+- Mise à jour des notes et décisions si pertinent
+
+Committer `spec.md` avec les autres changements.
