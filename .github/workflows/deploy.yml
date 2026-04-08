@@ -1,0 +1,28 @@
+name: Déployer sur weco.coop
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Préparer les fichiers à déployer
+        run: |
+          mkdir deploy
+          cp index.html deploy/
+          cp sitemap.xml deploy/
+          cp robots.txt deploy/
+          cp -r assets deploy/
+
+      - name: Upload via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          server: sftp.sd3.gpaas.net
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASS }}
+          local_path: deploy/*
+          remote_path: /lamp0/web/vhosts/weco.coop/htdocs/
+          sftp_only: true
