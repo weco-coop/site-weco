@@ -3,7 +3,7 @@
 ## État
 **Phase actuelle** : En ligne (déployé sur weco.coop, workflow GitHub → Gandi en place)
 **Mode** : Express
-**Dernière mise à jour** : 2026-04-08
+**Dernière mise à jour** : 2026-04-09
 
 ## Brief
 **Objectif** : Reproduire le site WordPress existant (quatorze.cc/weco) en site statique autonome, déployé sur weco.coop
@@ -87,6 +87,7 @@
 - **Workflow** : modifier localement ou via Claude Code → push sur GitHub → vérifier preview → cliquer "Deploy" dans Actions
 - **Credentials SFTP** : stockés dans GitHub Secrets (SFTP_USER, SFTP_PASS), token jetable 30 jours
 - **Guide collègue** : `GUIDE.md` dans le repo
+- **Guide débutant** : `docs/GUIDE-DEBUTANT.md` (créé 2026-04-09) — pas-à-pas pour quelqu'un qui n'a jamais utilisé GitHub ni Claude Code (création compte, invitation org, install Claude Code Desktop, première modif, preview, publication via Actions, FAQ, glossaire)
 
 ## Notes et décisions en cours
 - Le site WordPress original utilisait LayerSlider et Slider Revolution. Les dots de navigation latéraux étaient un artefact, non reproduits.
@@ -96,7 +97,7 @@
 
 ## Repo GitHub
 - **Repo** : github.com/weco-coop/site-weco (public, org weco-coop)
-- **Fichiers repo** : index.html, assets/, sitemap.xml, robots.txt, CLAUDE.md, GUIDE.md, docs/charte-visuelle.md, .github/workflows/deploy.yml, spec.md
+- **Fichiers repo** : index.html, assets/, sitemap.xml, robots.txt, CLAUDE.md, GUIDE.md, docs/charte-visuelle.md, docs/GUIDE-DEBUTANT.md, .github/workflows/deploy.yml, spec.md
 - **Preview** : weco-coop.github.io/site-weco/ (auto à chaque push)
 - **Production** : weco.coop (déploiement manuel via GitHub Actions)
 - **4 commits** à date (initial + deploy workflow + CLAUDE.md/guide + enrichissement CLAUDE.md)
