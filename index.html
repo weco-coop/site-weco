@@ -272,6 +272,136 @@ nav a.active { color: var(--accent-coral); }
   text-transform: uppercase;
 }
 
+/* ===== SECTION: PROJETS ===== */
+.projets {
+  background: var(--bg-cream);
+  padding: 80px 0;
+  overflow: hidden;
+}
+.projets h2 {
+  color: var(--text-purple);
+  margin-bottom: 8px;
+}
+.projets-intro {
+  margin-bottom: 40px;
+}
+.projets-intro p {
+  font-size: 15px;
+  color: var(--text-dark);
+  margin-top: 8px;
+}
+.carousel-wrapper {
+  position: relative;
+}
+.carousel-track-container {
+  overflow: hidden;
+}
+.carousel-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.4s ease;
+}
+.carousel-card {
+  flex: 0 0 calc(33.333% - 16px);
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 260px;
+}
+.carousel-card .card-tag {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-purple);
+  background: var(--bg-yellow);
+  padding: 4px 10px;
+  border-radius: 20px;
+  width: fit-content;
+}
+.carousel-card h3 {
+  font-size: 20px;
+  color: var(--text-dark);
+  margin: 0;
+}
+.carousel-card p {
+  font-size: 14px;
+  color: #666;
+  flex: 1;
+}
+.carousel-card .card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 4px;
+}
+.carousel-card .card-link {
+  font-size: 13px;
+  color: var(--text-purple);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.carousel-card .card-link:hover { color: var(--accent-coral); }
+.carousel-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+.carousel-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--text-purple);
+  background: transparent;
+  color: var(--text-purple);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+.carousel-btn:hover {
+  background: var(--text-purple);
+  color: #fff;
+}
+.carousel-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+.carousel-dots {
+  display: flex;
+  gap: 8px;
+}
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(139,104,198,0.25);
+  transition: background 0.2s, width 0.2s;
+  cursor: pointer;
+}
+.carousel-dot.active {
+  background: var(--text-purple);
+  width: 24px;
+  border-radius: 4px;
+}
+@media (max-width: 960px) {
+  .carousel-card { flex: 0 0 calc(80% - 12px); }
+}
+@media (max-width: 600px) {
+  .carousel-card { flex: 0 0 calc(90% - 12px); }
+}
+
 /* ===== SECTION: CONTEXTE ===== */
 .contexte {
   background: var(--bg-cream);
@@ -550,6 +680,7 @@ footer { background: var(--bg-cream); padding: 24px 0; font-size: 0.85rem; color
     <nav id="mainNav">
       <ul>
         <li><a href="#le-dispositif">Le dispositif</a></li>
+        <li><a href="#projets">Projets</a></li>
         <li><a href="#le-contexte">Le contexte</a></li>
         <li><a href="#innovation">L'innovation</a></li>
         <li><a href="#developpement">Développement</a></li>
@@ -605,6 +736,58 @@ footer { background: var(--bg-cream); padding: 24px 0; font-size: 0.85rem; color
       </div>
       <div>
         <img loading="lazy" src="assets/img/Plan-de-travail-15A.png" alt="Schéma du dispositif WECO">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETS -->
+<section class="projets" id="projets">
+  <div class="container">
+    <div class="projets-intro">
+      <h2>Projets</h2>
+    </div>
+    <div class="carousel-wrapper">
+      <div class="carousel-track-container">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-card">
+            <img loading="lazy" src="assets/img/LaRodde_1.jpg" alt="La Rodde" class="card-img">
+            <span class="card-tag">Éco-quartier</span>
+            <h3>La Rodde</h3>
+            <p>Un projet d'éco-quartier frugale pour les gens du voyage. Métropole de Clermont-Ferrand, Département du Puy de Dôme, Ville de Gerzat.</p>
+            <a href="larodde.html" class="card-link">En savoir plus →</a>
+          </div>
+          <div class="carousel-card">
+            <img loading="lazy" src="assets/img/SaintJo_1.png" alt="Les Lucioles du Sud-Sauvage" class="card-img">
+            <span class="card-tag">Habitat Participatif</span>
+            <h3>Les Lucioles du Sud-Sauvage</h3>
+            <p>8 logements écologiques très sociaux. Ile de la Réunion, Saint-Joseph.</p>
+            <a href="lucioles.html" class="card-link">En savoir plus →</a>
+          </div>
+          <div class="carousel-card">
+            <span class="card-tag">Rénovation frugale</span>
+            <h3>Nom du projet</h3>
+            <p>Description courte du projet — ville, porteurs, ambition.</p>
+            <a href="#" class="card-link">En savoir plus →</a>
+          </div>
+          <div class="carousel-card">
+            <span class="card-tag">Foncière solidaire</span>
+            <h3>Nom du projet</h3>
+            <p>Description courte du projet — ville, porteurs, ambition.</p>
+            <a href="#" class="card-link">En savoir plus →</a>
+          </div>
+          <div class="carousel-card">
+            <span class="card-tag">Hébergement d'urgence</span>
+            <h3>Nom du projet</h3>
+            <p>Description courte du projet — ville, porteurs, ambition.</p>
+            <a href="#" class="card-link">En savoir plus →</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-btn" id="carouselPrev" aria-label="Précédent">&#8592;</button>
+        <button class="carousel-btn" id="carouselNext" aria-label="Suivant">&#8594;</button>
+        <div class="carousel-dots" id="carouselDots"></div>
       </div>
     </div>
   </div>
@@ -877,6 +1060,61 @@ document.addEventListener('keydown', (e) => {
     menuToggle.focus();
   }
 });
+
+/* ===== CAROUSEL PROJETS ===== */
+(function() {
+  const track = document.getElementById('carouselTrack');
+  const prevBtn = document.getElementById('carouselPrev');
+  const nextBtn = document.getElementById('carouselNext');
+  const dotsContainer = document.getElementById('carouselDots');
+  if (!track) return;
+
+  const cards = track.querySelectorAll('.carousel-card');
+  let current = 0;
+
+  /* Nombre de cartes visibles selon la largeur */
+  function visibleCount() {
+    if (window.innerWidth <= 600) return 1;
+    if (window.innerWidth <= 960) return 1;
+    return 3;
+  }
+
+  function maxIndex() {
+    return Math.max(0, cards.length - visibleCount());
+  }
+
+  /* Création des points */
+  function buildDots() {
+    dotsContainer.innerHTML = '';
+    const total = maxIndex() + 1;
+    for (let i = 0; i < total; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === current ? ' active' : '');
+      dot.setAttribute('aria-label', 'Projet ' + (i + 1));
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function goTo(index) {
+    current = Math.max(0, Math.min(index, maxIndex()));
+    const cardWidth = cards[0].offsetWidth + 24; /* gap = 24px */
+    track.style.transform = 'translateX(-' + (current * cardWidth) + 'px)';
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current >= maxIndex();
+    dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+
+  buildDots();
+  goTo(0);
+
+  window.addEventListener('resize', () => { buildDots(); goTo(Math.min(current, maxIndex())); });
+})();
 </script>
 
 </body>
