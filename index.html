@@ -124,11 +124,11 @@ header.scrolled .nav-inner {
   height: 60px;
 }
 header.scrolled .nav-logo img {
-  height: 40px;
+  width: 100px;
 }
 @media (min-width: 960px) {
   header.scrolled .nav-inner { height: 70px; }
-  header.scrolled .nav-logo img { height: 50px; }
+  header.scrolled .nav-logo img { width: 140px; }
 }
 .nav-inner {
   display: flex;
@@ -145,12 +145,12 @@ header.scrolled .nav-logo img {
   transform: translateY(-50%);
 }
 .nav-logo img {
-  height: 64px;
-  width: auto;
-  transition: height 0.3s ease;
+  width: 160px;
+  height: auto;
+  transition: width 0.3s ease;
 }
 @media (min-width: 960px) {
-  .nav-logo img { height: 130px; }
+  .nav-logo img { width: 333px; }
   .nav-inner { height: 140px; }
 }
 nav ul {
