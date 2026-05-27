@@ -182,6 +182,7 @@ Les pages projets individuelles (`lucioles.html`, `larodde.html`, `lma.html`, et
   }
   ```
 - Reprendre `lucioles.html` ou `lma.html` comme base pour toute nouvelle page projet (structure HTML, CSS et JS identiques).
+- Les images du carrousel doivent utiliser `object-fit: contain` avec `background: var(--bg-cream)` — jamais `object-fit: cover` — pour afficher les images en entier sans recadrage ni distorsion.
 - Le lien retour pointe vers `index.html#projets`.
 
 ## Déploiement
