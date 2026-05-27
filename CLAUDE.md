@@ -166,6 +166,24 @@ Un breakpoint supplémentaire à 1499px réduit la taille du `.lead` de l'innova
 6. Le menu de navigation fonctionne (desktop + mobile)
 7. Les liens ancres pointent vers les bonnes sections
 
+## Pages projets (standard)
+
+Les pages projets individuelles (`lucioles.html`, `larodde.html`, `lma.html`, etc.) partagent une structure commune. Règles à respecter pour toute nouvelle page projet :
+
+- Le header doit avoir `top: 20px` (et non `top: 0`) pour éviter que le logo soit coupé par le bord supérieur du viewport.
+- Structure CSS header de référence :
+  ```css
+  header {
+    position: fixed;
+    top: 20px; left: 0; right: 0;
+    z-index: 100;
+    background: var(--bg-cream);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  ```
+- Reprendre `lucioles.html` ou `lma.html` comme base pour toute nouvelle page projet (structure HTML, CSS et JS identiques).
+- Le lien retour pointe vers `index.html#projets`.
+
 ## Déploiement
 
 - **Preview** : chaque push sur `main` met à jour https://weco-coop.github.io/site-weco/
